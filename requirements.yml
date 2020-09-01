@@ -1,0 +1,46 @@
+#conda env create -f python_base_req.yml
+name: py36
+channels:
+  - conda-forge
+  - bioconda
+  - biocore
+  - defaults
+  - pypi
+dependencies:
+  - python=3.6
+  - pip
+  - numpy>=1.18
+  - scipy>=1.4.1
+  - pandas>=1.0
+  - matplotlib
+  - jupyterlab
+  - qtconsole
+  - scikit-learn
+  - statsmodels
+  - patsy
+  - altair
+  - seaborn
+  - boto3
+  - awscli
+  - bokeh
+  - h5py
+  - numba
+  - lifelines
+  - zeromq
+  - libsodium
+  - nodejs
+  - ipympl
+  - umap-learn
+  - palettable
+  - feather-format
+  - scikit-bio
+  - jinja2
+  - shapely
+  - pytables
+  - pymc3
+  - dill
+  - pip:
+    - fishersapi
+    - hierdiff
+    - pwseqdist
+
