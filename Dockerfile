@@ -2,7 +2,7 @@
 FROM continuumio/anaconda3
 LABEL maintainer="agartlan@fredhutch.org"
 
-ENV PACKAGES procps git-all\
+ENV PACKAGES procps git openjdk-8-jre build-essential software-properties-common \
     ca-certificates zlib1g-dev curl unzip autoconf gnupg \
     ed less locales vim-tiny nano wget screen openjdk-8-jdk
 
