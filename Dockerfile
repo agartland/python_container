@@ -21,5 +21,9 @@ RUN conda env create -f requirements.yml && conda init bash
 
 RUN wget -qO- https://get.nextflow.io | bash
 
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    ./aws/install
+
 RUN cd /home
 # ENTRYPOINT ["/bin/bash"]

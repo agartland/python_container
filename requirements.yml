@@ -21,7 +21,6 @@ dependencies:
   - altair
   - seaborn
   - boto3
-  - awscli
   - bokeh
   - h5py
   - numba
