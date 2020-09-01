@@ -1,9 +1,18 @@
 # image: afioregartland/python_container
 FROM continuumio/anaconda3
-RUN apt-get update && apt-get install -y procps && apt-get install nano && apt-get install git-all
 LABEL maintainer="agartlan@fredhutch.org"
 
+ENV PACKAGES procps git-all\
+    ca-certificates zlib1g-dev curl unzip autoconf default-jre gnupg \
+    ed less locales vim-tiny nano wget screen
+
+ENV DEBIAN_FRONTEND noninteractive
+
 WORKDIR /home
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ${PACKAGES} && \
+    apt-get clean
 
 RUN curl -k -L https://github.com/agartland/python_container/requirements.yml -o requirements.yml && \
     conda env create -f requirements.yml && \
