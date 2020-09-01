@@ -3,7 +3,7 @@ FROM continuumio/anaconda3
 LABEL maintainer="agartlan@fredhutch.org"
 
 ENV PACKAGES procps git-all\
-    ca-certificates zlib1g-dev curl unzip autoconf default-jre gnupg \
+    ca-certificates zlib1g-dev curl unzip autoconf gnupg \
     ed less locales vim-tiny nano wget screen
 
 ENV DEBIAN_FRONTEND noninteractive
