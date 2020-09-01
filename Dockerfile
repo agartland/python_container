@@ -2,10 +2,9 @@
 FROM continuumio/anaconda3
 LABEL maintainer="agartlan@fredhutch.org"
 
-ENV PACKAGES procps git openjdk-8-jre build-essential software-properties-common \
+ENV PACKAGES procps git build-essential software-properties-common \
     ca-certificates zlib1g-dev curl unzip autoconf gnupg \
-    ed less locales vim-tiny nano wget screen openjdk-8-jdk
-
+    ed less locales vim-tiny nano wget screen default-jre default-jdk
 ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /home
