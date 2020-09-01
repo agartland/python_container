@@ -15,10 +15,7 @@ RUN apt-get update && \
     apt-get clean
 
 RUN curl -k -L https://raw.githubusercontent.com/agartland/python_container/master/requirements.yml -o requirements.yml
-RUN conda env create -f requirements.yml && conda activate py36
-
-# ENV LC_ALL en_US.UTF-8
-# ENV LANG en_US.UTF-8
+RUN conda env create -f requirements.yml && conda init bash
 
 RUN cd /home
 # ENTRYPOINT ["/bin/bash"]
