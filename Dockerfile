@@ -17,5 +17,7 @@ RUN apt-get update && \
 RUN curl -k -L https://raw.githubusercontent.com/agartland/python_container/master/requirements.yml -o requirements.yml
 RUN conda env create -f requirements.yml && conda init bash
 
+RUN wget -qO- https://get.nextflow.io | bash
+
 RUN cd /home
 # ENTRYPOINT ["/bin/bash"]
